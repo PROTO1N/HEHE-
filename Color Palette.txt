@@ -1,0 +1,20 @@
+1. Primary Color:
+Navy Blue: #003366
+    - headers, footers, and primary buttons.
+
+2. Secondary Color:
+Sky Blue: #66B2E8
+    - highlights, links, and secondary buttons.
+
+3. Accent Color:
+Emerald Green: #4CAF50
+    - success messages and call-to-action buttons.
+    
+Red: #D9534F
+- Error messages and call-to-action buttons.
+
+4. Background Color:
+Light Gray: #F5F5F5
+
+5. Text Color:
+Charcoal Gray: #333333
