@@ -385,6 +385,9 @@ if (isset($_SESSION['username'])) {
     <script src="js/particles.js"></script>
     <script src="js/particles.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/particles.js"></script>
+    <script src="../js/particles.min.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const headings = ["Seminar", "Internship", "Workshop", "Job"];
