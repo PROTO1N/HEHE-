@@ -1,0 +1,231 @@
+/* General styles for the form */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    width: 80%; /* Adjust width as needed */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px; /* Create gap around the form */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Add margin between tables */
+}
+
+table td {
+    padding: 10px;
+    border: 1px solid #ddd; /* Add borders to each table cell */
+}
+
+table caption {
+    font-size: 1.2rem; /* Caption font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ff0000; /* Red color for asterisk */
+}
+
+label[for] {
+    display: inline-block;
+    width: 150px; /* Adjust as needed for alignment */
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold; /* Bold left labels */
+    color: gray; /* Gray color for labels */
+}
+
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="file"],
+select {
+    width: calc(100% - 170px); /* Adjust width for input fields */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold everything on the right */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styles for Has Deadline section */
+#deadlineFields {
+    margin-top: 20px; /* Adjust margin top as needed */
+}
+
+#deadlineFields label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#deadlineFields input[type="date"] {
+    width: calc(100% - 160px); /* Adjust width for date input */
+}
+
+/* Styles for marking required fields */
+label.required {
+    color: red;
+    font-weight: bold;
+}
+
+.additional-details-heading {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.additional-details {
+    color: gray;
+    font-size: 0.8em;
+}
+
+/* Styling for the paragraph section after h1 */
+.post-opportunity {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 20px 0;
+    text-align: justify;
+}
+
+ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.email-link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    text-decoration: underline;
+}
+
+/* Additional styles for the large vertical gap */
+.large-gap {
+    height: 40px; /* Adjust height as needed */
+    display: block;
+}
+
+/* Additional styles for the neon heading */
+.post-opportunity {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    color: #ff00ff; /* Neon pink */
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    animation: neon 1.5s infinite linear alternate;
+    background-color: black; /* Black background */
+    padding: 20px; /* Padding for the heading */
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive; /* Pixelated font style */
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff;
+    }
+    to {
+        text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 30px #0000ff, 0 0 40px #0000ff, 0 0 50px #0000ff, 0 0 60px #0000ff, 0 0 70px #0000ff;
+    }
+}
+
+@media (max-width: 600px) {
+    form {
+        width: 100%;
+        margin-left: 0; /* Reset margin for smaller screens */
+        margin-right: 0; /* Reset margin for smaller screens */
+    }
+
+    label[for] {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 5px;
+    }
+
+    textarea,
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    input[type="file"],
+    select,
+    #deadlineFields input[type="date"] {
+        width: 100%;
+    }
+}
+
+/* Styles for "Your Details" section */
+.your-details-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+label[for="image"] {
+    display: inline-block;
+    width: 150px; /* Adjust width as needed */
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+    color: gray; /* Gray color for labels */
+}
+
+input[type="file"] {
+    width: calc(100% - 170px); /* Adjust width for input fields */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold; /* Bold everything on the right */
+}

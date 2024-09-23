@@ -1,0 +1,28 @@
+.opportunities-carousel {
+    margin: 20px 0;
+}
+
+.opportunity {
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.opportunity h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.opportunity p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
