@@ -1,7 +1,7 @@
 <?php
 // Database connection parameters
 $host = 'localhost'; // Change if necessary
-$db = 'user_profile';
+$db = 'jobportal';
 $user = 'root'; // Your MySQL username
 $password = ''; // Your MySQL password
 

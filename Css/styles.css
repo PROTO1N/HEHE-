@@ -4,68 +4,7 @@ body {
     padding: 0;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #007bff;
-    padding: 10px 20px;
-}
 
-.logo img {
-    height: 50px;
-    border-radius: 50%;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-nav ul li a:hover {
-    background-color: #0056b3;
-}
-
-.search-header {
-    margin-top: 10px;
-}
-
-.search-header form {
-    display: flex;
-    align-items: center;
-    padding: 15px;
-}
-
-.search-header input[type="text"] {
-    padding: 5px;
-    margin-right: 5px;
-}
-
-.search-header button {
-    padding: 5px 10px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.search-header button:hover {
-    background-color: #003f8f;
-}
 
 main {
     padding: 20px;
@@ -183,12 +122,16 @@ main {
 }
 
 /* Footer Styles */
-
+/* footer{
+    margin-top: auto;
+} */
 .footer-container {
     padding: 40px 100px 0;
     background-color: #003366; 
     color: #FFFFFF; 
+    
 }
+
 
 .footer-row-1 {
     
@@ -276,8 +219,7 @@ main {
     flex: 0 1 auto; 
     width: 100%;
     font-size: 1.5vh;
-    padding-bottom:20px;
-    padding-top: 15px;
+    margin: 0;
 }
 
 .footer-row:last-child {
