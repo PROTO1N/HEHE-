@@ -27,7 +27,7 @@ if (isset($_SESSION['user_name'])) {
             </div>
             <div class="nav">
                 <a href="#">Browse Opportunities</a>
-                <a href="../Header/post_opportunity.php">Post Opportunity</a>
+                <a href="../php/post_opportunity.php">Post Opportunity</a>
                 <?php if ($loggedIn) : ?>
                     <li><a href="../php/profile.php">Profile</a></li>
                     <li><a href="../php/logout.php">Logout</a></li>

@@ -13,6 +13,7 @@
     <?php include '../Header/header.php'; ?>
     <div class="signup-container">
 
+
         <div class="message-row">
             <?php if (isset($_SESSION['error'])): ?>
                 <div class="error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
@@ -41,6 +42,7 @@
             <div class="svg-column">
                 <img src="../svg/signup.svg" alt="SVG Image" style="max-width: 100%; border-radius: 10px;">
             </div>
+
         </div>
     </div>
     <?php include '../Footer/footer.php'; ?>
