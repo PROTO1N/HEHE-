@@ -44,42 +44,8 @@ if (isset($_SESSION['username'])) {
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="images/logo.png" alt="Logo" class="img-fluid">
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Browse Opportunities</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="post_opportunity.php">Post an Opportunity</a></li>
-                    <?php if ($loggedIn) : ?>
-                        <li class="nav-item"><a class="nav-link text-white" href="profile.php">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="logout.php">Logout</a></li>
-                    <?php else : ?>
-                        <li class="nav-item"><a class="nav-link text-white" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="signup.php">SignUp</a></li>
-                    <?php endif; ?>
-                </ul>
-            </nav>
-        </div>
-        <?php if ($loggedIn) : ?>
-            <div class="profile-actions">
-                <ul class="list-unstyled">
-                    <li><a href="edit_profile.php">Edit Profile</a></li>
-                    <li><a href="upload_profile_pic.php">Upload Profile Picture</a></li>
-                    <li><a href="followers.php">Check Followers</a></li>
-                    <li><a href="delete_account.php">Delete Account</a></li>
-                </ul>
-            </div>
-        <?php endif; ?>
-        <div class="search-header">
-            <form class="form-inline" action="search.php" method="get">
-                <input class="form-control mr-2" type="text" name="query" placeholder="Search opportunities...">
-                <button class="btn btn-dark" type="submit">Search</button>
-            </form>
-        </div>
-    </header>
+<?php include '../Header/header.php'; ?>
+    
     <main class="container mt-4">
         <div class="faq-container">
             <h1>FAQs</h1>

@@ -1,9 +1,10 @@
 <?php
+// include('../php/server.php');
 
 // Check if user is logged in
-if (isset($_SESSION['username'])) {
+if (isset($_SESSION['user_name'])) {
     $loggedIn = true;
-    $username = $_SESSION['username'];
+    $username = $_SESSION['user_name']; 
 } else {
     $loggedIn = false;
 }

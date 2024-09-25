@@ -122,12 +122,16 @@ main {
 }
 
 /* Footer Styles */
-
+/* footer{
+    margin-top: auto;
+} */
 .footer-container {
     padding: 40px 100px 0;
     background-color: #003366; 
     color: #FFFFFF; 
+    
 }
+
 
 .footer-row-1 {
     
@@ -146,6 +150,7 @@ main {
 
 .footer-column {
     
+    padding-left: 10px;
     flex: 1; 
     
 }
@@ -180,6 +185,7 @@ main {
     flex: 1; 
     padding: 30px;
     text-align: left; 
+    
 }
 
 .footer-title {
@@ -196,11 +202,14 @@ main {
 .footer-row-2{
     display: flex;
     flex-direction: column; 
+    align-items: center;
     padding: 5px;
     gap: 10px
 }
 .social-media{
     flex: 0 1 auto;
+    display: flex;
+    justify-content: center; 
 }
 .social-media a {
     margin-right: 20px; 
