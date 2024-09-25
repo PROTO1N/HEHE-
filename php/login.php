@@ -5,30 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
-    <link rel="stylesheet" href="../php/login.css">
+    <link rel="stylesheet" href="../Css/login.css">
 </head>
 <body>
+<?php include '../Header/header.php'; ?>
     <div class="login-container">
-        <h2>Login</h2>
-        <form action="login.php" method="POST">
-            <?php include('../php/errors.php'); ?>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <div class="checkbox-container">
-                <input type="checkbox" id="see-password" aria-label="See Password">
-                <label for="see-password">Show Password</label>
-            </div>
-            <div class="extra-options">
-                <div>
-                    <input type="checkbox" id="remember-me" name="remember-me">
-                    <label for="remember-me">Remember me</label>
+
+        <div class="message-row">
+            <?php if (isset($_SESSION['error'])): ?>
+                <div class="error"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+            <?php elseif (isset($_SESSION['success'])): ?>
+                <div class="success"><?php echo $_SESSION['success']; unset($_SESSION['success']); ?></div>
+            <?php endif; ?>
+        </div>
+
+        <div class="form-row">
+            <div class="form-column">
+                <h2>Login</h2>
+                <form action="../php/login_db.php" method="POST">
+                    
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    
+                    <button type="submit">Login</button>
+                </form>
+                <div class="login-prompt">
+                        <p>Don't have an account? <a href="../php/signup.php">Register</a></p>
                 </div>
-                <a href="../php/forgotpassword.php">Forgot Password?</a>
             </div>
-            <button type="submit" name="login_user">Login</button>
-        </form>
-        <div class="register">
-            <p>Don't have an account? <a href="../php/signup.php">Register</a></p>
+            <div class="svg-column">
+                <img src="../svg/welcome.svg" alt="SVG Image" style="max-width: 100%; border-radius: 10px;">
+            </div>
         </div>
     </div>
     <script>
@@ -41,5 +48,7 @@
             }
         });
     </script>
+    <?php include '../Footer/footer.php'; ?>
+
 </body>
 </html>

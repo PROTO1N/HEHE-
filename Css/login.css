@@ -1,116 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Poppins:wght@300;500&display=swap');
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #ff4e50, #f9d423);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-}
-
 .login-container {
-    background: #fff;
-    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 40px auto;
+  
 }
 
-.login-container h2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: 24px;
-    margin-bottom: 20px;
+.message-row {
+    width: 100%; 
+    text-align: center; 
 }
 
-.login-container form {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-container input[type="email"],
-.login-container input[type="password"] {
+.error {
+    color: red;
     font-size: 16px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 2px solid #ddd;
+    padding: 20px; 
+    background-color: #f8d7da; 
+    border: 1px solid red; 
+    border-radius: 5px; 
+}
+
+.success {
+    color: green;
+    font-size: 16px;
+    padding: 20px; 
+    background-color: #d4edda; 
+    border: 1px solid green; 
+    border-radius: 5px; 
+}
+
+.form-row {
+   
+    display: flex;
+    width: 100%; 
+    overflow:hidden ;
+}
+
+.form-column {
+    flex: 0 0 50%; 
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+
+
+.form-column input {
+    width: 100%; 
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    transition: border-color 0.3s ease;
-    width: calc(100% - 22px); /* Adjust for border and padding */
+    box-sizing: border-box;
+    font-size: 16px; 
 }
 
-.login-container input[type="email"]:focus,
-.login-container input[type="password"]:focus {
-    border-color: #ff4e50;
-    outline: none;
-}
-
-.checkbox-container {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-.checkbox-container input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.extra-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    margin: 10px 0;
-}
-
-.extra-options input[type="checkbox"] {
-    margin-right: 5px;
-}
-
-.extra-options a {
-    color: #ff4e50;
-    text-decoration: none;
-}
-
-.extra-options a:hover {
-    text-decoration: underline;
-}
-
-.login-container button[type="submit"] {
-    background: #ff4e50;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px;
+.form-column button {
+    padding: 15px; 
+    background-color: #003366;
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    width: 100%; 
+    font-size: 16px; 
+    margin-top:15px;
 }
 
-.login-container button[type="submit"]:hover {
-    background: #d43f41;
+.form-column button:hover {
+    background-color: #4870c5; 
+}
+.login-prompt {
+    /* border:pink solid; */
+    margin-top: 18px; 
+    font-size: 15px; 
 }
 
-.register {
-    margin-top: 20px;
+.login-prompt a {
+    color: #66B2E8; 
+    text-decoration: none; 
 }
 
-.register a {
-    color: #ff4e50;
-    text-decoration: none;
-    font-weight: 500;
+.login-prompt a:hover {
+    text-decoration: underline; 
+    color: #4870c5; 
+
 }
 
-.register a:hover {
-    text-decoration: underline;
+.password-toggle input {
+    margin-right: 5px; 
+    vertical-align: middle;
+}
+.svg-column {
+  
+    flex: 0 0 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding:2%; */
+    /* overflow: hidden; */
+
+}
+.svg-column img {
+     
+    height: 80%;  
+    object-fit: cover; 
+    border-radius: 50%;
 }
