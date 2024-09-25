@@ -122,12 +122,16 @@ main {
 }
 
 /* Footer Styles */
-
+/* footer{
+    margin-top: auto;
+} */
 .footer-container {
     padding: 40px 100px 0;
     background-color: #003366; 
     color: #FFFFFF; 
+    
 }
+
 
 .footer-row-1 {
     

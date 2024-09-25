@@ -44,42 +44,8 @@ if (isset($_SESSION['username'])) {
     </style>
 </head>
 <body>
-    <header class="bg-primary text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="logo">
-                <img src="images/logo.png" alt="Logo" class="img-fluid">
-            </div>
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Browse Opportunities</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="post_opportunity.php">Post an Opportunity</a></li>
-                    <?php if ($loggedIn) : ?>
-                        <li class="nav-item"><a class="nav-link text-white" href="profile.php">Profile</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="logout.php">Logout</a></li>
-                    <?php else : ?>
-                        <li class="nav-item"><a class="nav-link text-white" href="login.php">Login</a></li>
-                        <li class="nav-item"><a class="nav-link text-white" href="signup.php">SignUp</a></li>
-                    <?php endif; ?>
-                </ul>
-            </nav>
-        </div>
-        <?php if ($loggedIn) : ?>
-            <div class="profile-actions">
-                <ul class="list-unstyled">
-                    <li><a href="edit_profile.php">Edit Profile</a></li>
-                    <li><a href="upload_profile_pic.php">Upload Profile Picture</a></li>
-                    <li><a href="followers.php">Check Followers</a></li>
-                    <li><a href="delete_account.php">Delete Account</a></li>
-                </ul>
-            </div>
-        <?php endif; ?>
-        <div class="search-header">
-            <form class="form-inline" action="search.php" method="get">
-                <input class="form-control mr-2" type="text" name="query" placeholder="Search opportunities...">
-                <button class="btn btn-dark" type="submit">Search</button>
-            </form>
-        </div>
-    </header>
+<?php include '../Header/header.php'; ?>
+    
     <main class="container mt-4">
         <div class="faq-container">
             <h1>FAQs</h1>
@@ -109,40 +75,8 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
     </main>
-    <footer class="bg-primary text-white p-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="social-media mb-3">
-                        <a href="#"><img src="images/twitter.png" alt="Twitter" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/fb.png" alt="Facebook" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/instagram.png" alt="Instagram" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/youtube.png" alt="YouTube" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-unstyled">
-                        <li><a class="text-white" href="youth_opportunities.php">Youth Opportunities</a></li>
-                        <li><a class="text-white" href="about.php">About</a></li>
-                        <li><a class="text-white" href="partners.php">Partners</a></li>
-                        <li><a class="text-white" href="faq.php">FAQs</a></li>
-                        <li><a class="text-white" href="join.php">Join</a></li>
-                        <li><a class="text-white" href="network.php">Local Networks</a></li>
-                        <li><a class="text-white" href="contact.php">Contact</a></li>
-                        <li><a class="text-white" href="#">Promote Program</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="footer-description">
-                        <h3>International Youth Opportunities</h3>
-                        <p>Youth Opportunities is the largest opportunities discovery platform for youth across Nepal.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center mt-3">&copy; 2024 Job Portal. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php include '../Footer/footer.php'; ?>
+
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
