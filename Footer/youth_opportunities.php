@@ -32,7 +32,7 @@
 
             <!-- Display opportunities carousel here -->
             <div class="opportunities-carousel">
-                <?php include 'display_opportunities.php'; ?>
+                <?php include '../header/display_opportunities.php'; ?>
             </div>
         </section>
     </main>

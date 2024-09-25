@@ -23,7 +23,6 @@ if (isset($_POST['reg_user'])) {
     $password_2 = mysqli_real_escape_string($db, $_POST['password2']);
 
     // form validation: ensure that the form is correctly filled ...
-    // by adding (array_push()) corresponding error unto $errors array
     if (empty($username)) { array_push($errors, "Username is required"); }
     if (empty($email)) { array_push($errors, "Email is required"); }
     if (empty($password_1)) { array_push($errors, "Password is required"); }
@@ -56,10 +55,14 @@ if (isset($_POST['reg_user'])) {
     if (count($errors) == 0) {
         $password = md5($password_1); // encrypt the password before saving in the database
 
-        $query = "INSERT INTO users (username, email, password) 
-                  VALUES('$username', '$email', '$password')";
+        // Default role is 'user'
+        $role = 'user';
+
+        $query = "INSERT INTO users (username, email, password, role) 
+                  VALUES('$username', '$email', '$password', '$role')";
         if (mysqli_query($db, $query)) {
             $_SESSION['username'] = $username;
+            $_SESSION['role'] = $role; // Store user role in session
             $_SESSION['success'] = "You have successfully signed up!";
             echo '<script>alert("Sign up successful!"); window.location.href = "../php/index.php";</script>';
         } else {
@@ -90,9 +93,16 @@ if (isset($_POST['login_user'])) {
         } elseif (mysqli_num_rows($results) == 1) {
             // Fetch the user details
             $user = mysqli_fetch_assoc($results);
-            $_SESSION['username'] = $user['username']; // Set username in session
+            $_SESSION['username'] = $user['username'];
+            $_SESSION['role'] = $user['role']; // Store user role in session
             $_SESSION['success'] = "You have successfully logged in!";
-            echo '<script>alert("Login successful!"); window.location.href = "../php/index.php";</script>';
+
+            // Redirect user based on role
+            if ($user['role'] === 'admin') {
+                echo '<script>alert("Login successful!"); window.location.href = "../admin/dashboard.php";</script>';
+            } else {
+                echo '<script>alert("Login successful!"); window.location.href = "../php/index.php";</script>';
+            }
         } else {
             array_push($errors, "Wrong email/password combination");
         }

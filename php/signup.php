@@ -16,16 +16,26 @@
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password1" placeholder="Password" required>
             <input type="password" name="password2" placeholder="Confirm Password" required>
+
+            <!-- Role selection -->
+            <label for="role">Register as:</label>
+            <select name="role" id="role" required>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+            </select>
+
             <div class="terms">
                 <input type="checkbox" id="terms" name="terms" required>
                 <label for="terms">I agree to the <a href="t.html">terms and conditions</a></label>
             </div>
             <button type="submit" name="reg_user">Sign Up</button>
         </form>
+        
         <div class="extra-options">
             <button type="button" class="social-button google">Sign up with Google</button>
             <button type="button" class="social-button facebook">Sign up with Facebook</button>
         </div>
+        
         <div class="login">
             <p>Already have an account? <a href="../php/login.php">Log In</a></p>
         </div>

@@ -109,43 +109,8 @@ if (isset($_SESSION['username'])) {
             </div>
         </div>
     </main>
-    <footer class="bg-primary text-white p-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="social-media mb-3">
-                        <a href="#"><img src="images/twitter.png" alt="Twitter" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/fb.png" alt="Facebook" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/linkedin.png" alt="LinkedIn" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/instagram.png" alt="Instagram" class="img-fluid mr-2"></a>
-                        <a href="#"><img src="images/youtube.png" alt="YouTube" class="img-fluid"></a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-unstyled">
-                        <li><a class="text-white" href="youth_opportunities.php">Youth Opportunities</a></li>
-                        <li><a class="text-white" href="about.php">About</a></li>
-                        <li><a class="text-white" href="partners.php">Partners</a></li>
-                        <li><a class="text-white" href="faq.php">FAQs</a></li>
-                        <li><a class="text-white" href="join.php">Join</a></li>
-                        <li><a class="text-white" href="network.php">Local Networks</a></li>
-                        <li><a class="text-white" href="contact.php">Contact</a></li>
-                        <li><a class="text-white" href="#">Promote Program</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="footer-description">
-                        <h3>International Youth Opportunities</h3>
-                        <p>Youth Opportunities is the largest opportunities discovery platform for youth across Nepal.</p>
-                    </div>
-                </div>
-            </div>
-            <p class="text-center mt-3">&copy; 2024 Job Portal. All rights reserved.</p>
-        </div>
-    </footer>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <?php include '../Footer/footer.php'; ?>
+
 </body>
 </html>

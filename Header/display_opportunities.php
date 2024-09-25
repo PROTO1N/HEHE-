@@ -8,6 +8,24 @@ if (!$db) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
+
+// Set how many opportunities to display per page
+$opportunities_per_page = 4;
+
+// Get the current page number from the URL, if not present set to 1
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+
+// Calculate the offset for the SQL query
+$offset = ($page - 1) * $opportunities_per_page;
+
+// Fetch total number of opportunities
+$total_query = "SELECT COUNT(*) as total FROM opportunities";
+$total_result = mysqli_query($db, $total_query);
+$total_row = mysqli_fetch_assoc($total_result);
+$total_opportunities = $total_row['total'];
+
+// Calculate total number of pages needed
+$total_pages = ceil($total_opportunities / $opportunities_per_page);
 // Fetch all opportunities
 $query = "SELECT * FROM opportunities ORDER BY category";
 $result = mysqli_query($db, $query);
@@ -39,8 +57,53 @@ echo "</pre>";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Opportunities</title>
-    <link rel="stylesheet" href="../Css/styles.css">
-</head>
+    <style>
+        /* Grid layout for opportunities */
+        .opportunities-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            gap: 20px;
+        }
+
+        .opportunity-item {
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+        }
+
+        .opportunity-item img {
+            max-width: 100px;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .pagination a {
+            display: inline-block;
+            margin: 0 5px;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #333;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .pagination a.active {
+            background-color: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+    </style>
 <body>
     <h1>Opportunities</h1>
     <?php if (empty($opportunities_by_category)) : ?>
